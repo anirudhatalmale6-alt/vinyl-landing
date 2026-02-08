@@ -342,10 +342,10 @@ textarea {
     inset: 0;
     background: linear-gradient(
         135deg,
-        rgba(0, 0, 0, 0.88) 0%,
-        rgba(0, 0, 0, 0.72) 40%,
-        rgba(0, 0, 0, 0.55) 70%,
-        rgba(0, 0, 0, 0.7) 100%
+        rgba(0, 0, 0, 0.92) 0%,
+        rgba(0, 0, 0, 0.82) 40%,
+        rgba(0, 0, 0, 0.7) 70%,
+        rgba(0, 0, 0, 0.8) 100%
     );
 }
 
@@ -970,6 +970,39 @@ textarea {
 /* ---------- VENTAJAS SECTION ---------- */
 .ventajas {
     position: relative;
+    overflow: hidden;
+}
+
+.ventajas-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.ventajas-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.ventajas-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(17, 17, 17, 0.92) 0%,
+        rgba(17, 17, 17, 0.78) 40%,
+        rgba(17, 17, 17, 0.78) 60%,
+        rgba(17, 17, 17, 0.92) 100%
+    );
+}
+
+.ventajas .section-header,
+.ventajas .ventajas-grid,
+.ventajas .stats-bar {
+    position: relative;
+    z-index: 1;
 }
 
 .ventajas::before {
@@ -981,6 +1014,7 @@ textarea {
     width: 80%;
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(200, 164, 80, 0.12), transparent);
+    z-index: 1;
 }
 
 /* Graffiti spray accent behind ventajas */
