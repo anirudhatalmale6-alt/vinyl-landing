@@ -177,7 +177,6 @@ textarea {
 /* Container utility */
 .servicios,
 .colores,
-.ventajas,
 .proceso,
 .contacto {
     max-width: var(--container-max);
@@ -971,6 +970,18 @@ textarea {
 .ventajas {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    padding: var(--section-padding);
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.ventajas > .section-header,
+.ventajas > .ventajas-grid,
+.ventajas > .stats-bar {
+    max-width: var(--container-max);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ventajas-bg {
@@ -1042,12 +1053,14 @@ textarea {
 }
 
 .ventaja-item {
-    background: var(--bg-card);
+    background: rgba(30, 28, 26, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius-md);
     padding: 32px 24px;
     text-align: center;
-    border: 1px solid rgba(200, 164, 80, 0.06);
-    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+    border: 1px solid rgba(200, 164, 80, 0.1);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base), background var(--transition-base);
     position: relative;
     overflow: hidden;
 }
@@ -1068,6 +1081,7 @@ textarea {
     transform: translateY(-8px);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
     border-color: rgba(200, 164, 80, 0.12);
+    background: rgba(30, 28, 26, 0.7);
 }
 
 .ventaja-item:hover::before {
@@ -1145,7 +1159,8 @@ textarea {
     background: rgba(200, 164, 80, 0.1);
 }
 
-.stat-number {
+.stat-number,
+.stat-number-text {
     font-family: var(--font-graffiti);
     font-size: clamp(2rem, 4vw, 3rem);
     background: linear-gradient(135deg, var(--red-light), var(--orange-warm), var(--gold));
@@ -1686,23 +1701,24 @@ textarea {
     position: fixed;
     bottom: 100px;
     right: 32px;
-    width: 44px;
-    height: 44px;
-    background: rgba(30, 28, 26, 0.9);
+    width: 48px;
+    height: 48px;
+    background: rgba(192, 57, 43, 0.85);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(200, 164, 80, 0.12);
+    border: 2px solid rgba(230, 126, 34, 0.3);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-secondary);
+    color: #ffffff;
     z-index: 998;
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
     transition: opacity var(--transition-base), visibility var(--transition-base), transform var(--transition-base), color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
     cursor: pointer;
+    box-shadow: 0 4px 15px rgba(192, 57, 43, 0.3);
 }
 
 .scroll-top-btn.visible {
@@ -1712,10 +1728,11 @@ textarea {
 }
 
 .scroll-top-btn:hover {
-    color: var(--orange-warm);
+    color: #ffffff;
     border-color: var(--orange-warm);
-    background: rgba(230, 126, 34, 0.1);
+    background: rgba(230, 126, 34, 0.9);
     transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
 }
 
 /* ---------- ANIMATIONS ---------- */
