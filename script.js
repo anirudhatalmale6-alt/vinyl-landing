@@ -50,10 +50,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(13, 13, 13, 0.98)';
+            navbar.style.background = 'rgba(17, 17, 17, 0.98)';
             navbar.style.boxShadow = '0 5px 30px rgba(0, 0, 0, 0.5)';
         } else {
-            navbar.style.background = 'rgba(13, 13, 13, 0.85)';
+            navbar.style.background = 'rgba(17, 17, 17, 0.85)';
             navbar.style.boxShadow = 'none';
         }
     });
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const input = document.getElementById(field);
                 if (!input.value.trim()) {
                     isValid = false;
-                    input.style.borderColor = '#ff2d7b';
+                    input.style.borderColor = '#c0392b';
                     input.addEventListener('input', function() {
                         this.style.borderColor = '';
                     }, { once: true });
@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(emailInput.value)) {
                     isValid = false;
-                    emailInput.style.borderColor = '#ff2d7b';
+                    emailInput.style.borderColor = '#c0392b';
                     emailInput.addEventListener('input', function() {
                         this.style.borderColor = '';
                     }, { once: true });
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const phoneRegex = /^[\d\s\+\-\(\)]{9,}$/;
             if (!phoneRegex.test(telefonoInput.value)) {
                 isValid = false;
-                telefonoInput.style.borderColor = '#ff2d7b';
+                telefonoInput.style.borderColor = '#c0392b';
             }
 
             if (!isValid) return;
